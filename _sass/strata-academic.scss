@@ -6,6 +6,71 @@
   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+// global variables
+:root {
+  // dark mode is the default theme here
+  --background: #303030;
+  --text: #c7c6c6;
+  --hover: #eeeeee;
+  --header_background: #202020;
+  --header_text: #ffffff80;
+  --header_icons: #ffffff80;
+  --header_title: #c7c6c6;
+  --header_outline: #a8a8a880;
+  .fa-moon {
+    display : none;
+  }
+  .fa-sun {
+    display : block;
+  }
+}
+
+.light-theme {
+  --background: #eeeeee;
+  --text: #303030;
+  --hover: #424242;
+  --header_background: #d4d4d4;
+  --header_text: #00000080;
+  --header_icons: #00000080;
+  --header_title: #303030;
+  --header_outline: #a8a8a880;
+  .fa-sun {
+    display : none;
+  }
+  .fa-moon {
+    display : block;
+  }
+}
+
+// currently not being used
+.mixed-theme {
+  --background: #eeeeee;
+  --text: #303030;
+  --hover: #424242;
+  --header_background: #303030;
+  --header_text: #ffffff80;
+  --header_title: #c7c6c6;
+  --header_outline: #a8a8a880;
+  .fa-sun {
+    display : none;
+  }
+  .fa-moon {
+    display : block;
+  }
+}
+
+#theme-toggle {
+  padding: 0;
+  border: 0;
+  background-color: inherit;
+  font-size:1.6rem;
+  color: var(--header_text);
+  &:hover {
+    color: var(--hover);
+    cursor: pointer;
+  }
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -16,7 +81,7 @@ form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
-section, summary, time, mark, audio, video {
+section, summary, time, mark, audio, video, light-toggle {
   margin: 0;
   padding: 0;
   border: 0;
@@ -111,7 +176,7 @@ input, select, textarea {
   }
 
   body {
-    background: #fff;
+    background: var(--background);
   }
 
     body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -126,7 +191,7 @@ input, select, textarea {
     }
 
   body, input, select, textarea {
-    color: #a2a2a2;
+    color: var(--text);
     font-family: "Source Sans Pro", Helvetica, sans-serif;
     font-size: 16pt;
     font-weight: 400;
@@ -139,19 +204,19 @@ input, select, textarea {
     -ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
     transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
     border-bottom: dotted 1px;
-    color: #49bf9d;
+    color: #2596be;
     text-decoration: none;
   }
 
     a:hover {
       border-bottom-color: transparent;
-      color: #49bf9d !important;
+      color: var(--hover) !important;
       text-decoration: none;
     }
 
   strong, b {
-    color: #787878;
-    font-weight: 400;
+    color: var(--text);
+    font-weight: 800;
   }
 
   em, i {
@@ -159,14 +224,14 @@ input, select, textarea {
   }
 
   p {
-    margin: 0 0 2em 0;
+    margin: 0 0 0.75em 0;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    color: #787878;
-    font-weight: 400;
+    color: var(--text);
+    font-weight: 800;
     line-height: 1em;
-    margin: 0 0 1em 0;
+    margin: 0 0 0.5em -1px;
   }
 
     h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -175,17 +240,17 @@ input, select, textarea {
     }
 
   h1 {
-    font-size: 2em;
-    line-height: 1.5em;
-  }
-
-  h2 {
     font-size: 1.5em;
     line-height: 1.5em;
   }
 
-  h3 {
+  h2 {
     font-size: 1.25em;
+    line-height: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.20em;
     line-height: 1.5em;
   }
 
@@ -1869,7 +1934,7 @@ input, select, textarea {
     input[type="email"]:focus,
     select:focus,
     textarea:focus {
-      border-color: #49bf9d;
+      border-color: #2596be;
     }
 
   select {
@@ -1974,7 +2039,7 @@ input, select, textarea {
 
     input[type="checkbox"]:focus + label:before,
     input[type="radio"]:focus + label:before {
-      border-color: #49bf9d;
+      border-color: #2596be;
     }
 
   input[type="checkbox"] + label:before {
@@ -2077,7 +2142,7 @@ input, select, textarea {
       -webkit-transition: opacity 0.2s ease-in-out;
       -ms-transition: opacity 0.2s ease-in-out;
       transition: opacity 0.2s ease-in-out;
-      background: url("../img/bg.jpg");
+      background: var(--header_background);
       border-radius: 0.35em;
       content: '';
       display: block;
@@ -2122,7 +2187,7 @@ input, select, textarea {
       }
 
       .image.thumb:hover:before {
-        background: url("../img/bg.jpg"), url("../img/bg.jpg");
+        background: var(--hover);
         opacity: 1.0;
       }
 
@@ -2193,7 +2258,9 @@ input, select, textarea {
   }
 
     ul li {
-      padding-left: 0.5em;
+      padding-left: 0em;
+      font-size: 0.90em;
+      line-height: 1.5em;
     }
 
     ul.alt {
@@ -2259,7 +2326,6 @@ input, select, textarea {
       }
 
       ul.labeled-icons li h3 {
-        color: #b2b2b2;
         left: 0;
         position: absolute;
         text-align: center;
@@ -2492,8 +2558,8 @@ input, select, textarea {
     input[type="reset"]:hover,
     input[type="button"]:hover,
     .button:hover {
-      border-color: #49bf9d;
-      color: #49bf9d !important;
+      border-color: #2596be;
+      color: #2596be !important
     }
 
     input[type="submit"]:active,
@@ -2501,8 +2567,8 @@ input, select, textarea {
     input[type="button"]:active,
     .button:active {
       background-color: rgba(73, 191, 157, 0.1);
-      border-color: #49bf9d;
-      color: #49bf9d !important;
+      border-color: #2596be;
+      color: #2596be !important
     }
 
     input[type="submit"].icon,
@@ -2545,8 +2611,8 @@ input, select, textarea {
     input[type="reset"].primary,
     input[type="button"].primary,
     .button.primary {
-      background-color: #49bf9d;
-      border-color: #49bf9d;
+      background-color: #2596be;
+      border-color: #2596be;
       color: #ffffff !important;
     }
 
@@ -2614,25 +2680,25 @@ input, select, textarea {
     -moz-align-items: -moz-flex-end;
     -webkit-align-items: -webkit-flex-end;
     -ms-align-items: -ms-flex-end;
+    outline: 1px solid var(--header_outline);
     align-items: flex-end;
     -moz-justify-content: space-between;
     -webkit-justify-content: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
-    background-color: #1f1815;
     background-attachment: scroll,                scroll;
-    background-image: url("../img/bg.jpg");
+    background-color: var(--header_background);
     background-position: top left,              top left;
     background-repeat: repeat,                no-repeat;
     background-size: auto,                150%;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--header_text);
     height: 100%;
     left: 0;
-    padding: 8em 4em;
+    padding: 0em 1em 4em 1em;
     position: fixed;
     text-align: center;
     top: 0;
-    width: 23%;
+    width: 24%;
   }
 
     #header > * {
@@ -2643,7 +2709,14 @@ input, select, textarea {
       width: 100%;
     }
 
+    #header > .toggle-container {
+      padding: 2em 2em;
+      display: flex;
+      float: right; // push to most right
+    }
+
     #header > .inner {
+      padding: 2em 2em;
       -moz-flex-grow: 1;
       -webkit-flex-grow: 1;
       -ms-flex-grow: 1;
@@ -2652,7 +2725,7 @@ input, select, textarea {
     }
 
     #header strong, #header b {
-      color: #ffffff;
+      color: var(--header_title);
     }
 
     #header h2, #header h3, #header h4, #header h5, #header h6 {
@@ -2660,7 +2733,7 @@ input, select, textarea {
     }
 
     #header h1 {
-      color: rgba(255, 255, 255, 0.5);
+      color: var(--header_text);
       font-size: 1.35em;
       line-height: 1.75em;
       margin: 0;
@@ -2678,7 +2751,10 @@ input, select, textarea {
   }
 
     #footer .icons a {
-      color: rgba(255, 255, 255, 0.4);
+      color: var(--header_icons);
+      &:hover {
+        color: var(--hover);
+      }
     }
 
   #footer .copyright {
@@ -2712,7 +2788,7 @@ input, select, textarea {
   #main {
     margin-left: 28%;
     max-width: 54em;
-    padding: 8em 4em 4em 4em;
+    padding: 8em 2em 4em 2em;
     width: calc(100% - 35%);
   }
 
@@ -3105,8 +3181,7 @@ input, select, textarea {
 
       #footer {
         background-attachment: scroll;
-        background-color: #1f1815;
-        background-image: url("../img/bg.jpg");
+        background-color: var(--header_background);
         background-position: top left,            bottom center;
         background-repeat: repeat,              no-repeat;
         background-size: auto,              cover;

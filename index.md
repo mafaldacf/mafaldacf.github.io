@@ -2,67 +2,67 @@
 layout: homepage
 ---
 
-## Research Interests
+## ABOUT
 
-- **Computer Vision:** image recognition, image generation, video captioning
-- **Machine Learning:** meta-learning, incremental learning, transfer learning
+<p> I recently completed my Master's degree in Computer Science and Engineering at Instituto Superior Técnico, Lisbon.
+Currently, I am conducting research at INESC-ID, exploring the topics of causal consistency in microservice-based applications and serverless platforms.
+</p>
 
-## News
+## EDUCATION
 
-- **[Feb 2020]** Our paper about incremental learning is accepted to [CVPR 2020](http://cvpr2020.thecvf.com/).
-- **[Feb 2020]** We will host the [ACM Multimedia Asia 2020](https://mmasia2020.org/) conference in Singapore!
-- **[Sep 2019]** Our paper about few-shot learning is accepted to [NeurIPS 2019](https://nips.cc/Conferences/2019).
-- **[Mar 2019]** Our paper about few-shot learning is accepted to [CVPR 2019](http://cvpr2019.thecvf.com/).
+- **MSc in Computer Science and Engineering** (18/20) - *Nov 2023*
+  <br>
+  Instituto Superior Técnico, Lisbon <br>
+  Fields: Distributed Systems, Cyber Security <br>
+  Thesis: Request Workflow Monitor for Microservice-based Web Applications [[URL](https://fenix.tecnico.ulisboa.pt/cursos/meic-a/dissertacao/2535628432474134)]
 
-## Publications
+- **BSc in Computer Science and Engineering** (15/20) - *Jul 2022*
+  <br>
+  Instituto Superior Técnico, Lisbon
 
-- **Mnemonics Training: Multi-Class Incremental Learning without Forgetting**
+## PUBLICATIONS
+- **Rendezvous: Where Serverless Functions Find Consistency**
   <br>
-  **Yaoyao Liu**, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
+  <u>Mafalda Sofia Ferreira</u>, João Ferreira Loff, João Garcia
   <br>
-  IEEE Conference on Computer Vision and Pattern Recognition. **CVPR 2020**.
+  **WORDS '23**: Proceedings of the 4th Workshop on Resource Disaggregation and Serverless Computing. Held with SOSP '23.
   <br>
-  [[PDF](https://arxiv.org/pdf/2002.10211.pdf)] [[Code](https://github.com/yaoyao-liu/mnemonics)] [[Project](https://mnemonics.yyliu.net/)] <strong><i style="color:#e74d3c">Oral Presentation</i></strong>
+  [[URL](https://dl.acm.org/doi/10.1145/3605181.3626290)] [[PDF](https://dl.acm.org/doi/pdf/10.1145/3605181.3626290)]
 
-- **Learning to Self-Train for Semi-Supervised Few-Shot Classification**
-  <br>
-  Xinzhe Li, Qianru Sun, **Yaoyao Liu**, Shibao Zheng, Qin Zhou, Tat-Seng Chua, Bernt Schiele
-  <br>
-  33rd Conference on Neural Information Processing Systems. **NeurIPS 2019**.
-  <br>
-  [[PDF](http://papers.nips.cc/paper/9216-learning-to-self-train-for-semi-supervised-few-shot-classification.pdf)] [[Code](https://github.com/xinzheli1217/learning-to-self-train)] [[Poster](https://people.mpi-inf.mpg.de/~yaliu/files/learning-to-self-train-poster.pdf)]
+## EXPERIENCE
 
-- **Meta-Transfer Learning for Few-Shot Learning**
+- **Software Engineering Intern @ SingleStore (formerly, MemSQL)**
   <br>
-  Qianru Sun\*, **Yaoyao Liu\***, Tat-Seng Chua, Bernt Schiele
+  *Sep 2023 - Dec 2023*
   <br>
-  IEEE Conference on Computer Vision and Pattern Recognition. **CVPR 2019**.
+  - Worked in the cloud portal and management API for the Managed Service team.
+  - Implemented a new feature that enhances the management of firewalls for SingleStore database clusters.
+
+- **After-College Program (ACE) Intern @ Premium Minds**
   <br>
-  [[PDF](http://openaccess.thecvf.com/content_CVPR_2019/papers/Sun_Meta-Transfer_Learning_for_Few-Shot_Learning_CVPR_2019_paper.pdf)] [[Code](https://github.com/yaoyao-liu/meta-transfer-learning)] [[Project](https://mtl.yyliu.net/)] [[Poster](https://people.mpi-inf.mpg.de/~yaliu/files/meta-transfer-learning-poster.pdf)]
+  *Mar 2023 - Jun 2023*
+  <br>
+  - Acquired insights into version control, continuous integration, and testing methodologies
+  - Developed software using Python, JavaScript, SQL, HTML, Git, and Docker.
+
+## AWARDS AND CERTIFICATES
+
+- **Instituto Superior Técnico**
+  <br>
+  Merit Award in Cloud Computing and Virtualization 2022/2023 [[PDF](https://drive.google.com/file/d/1r5Jd3oLEjNX7ZBOZBxbM9cJDe-bvUrOq/view?usp=sharing)]
+  <br>
+  Academic Merit Diploma 2019/2020 [[PDF](https://drive.google.com/file/d/1f8jQJwIKNRx0fauHoVes_p-uyA2ZJYi4/view?usp=sharing)]
+
+- **Cambridge University - Assessment English**
+  <br>
+  First Certificate in English (FCE) - July 2017
+
+## CONTACTS
+
+  <i class="fas fa-map-marker-alt" style="font-size: 16px; padding-right: 5px;"></i> INESC-ID, Room 601 - R. Alves Redol 9, 1000-029 Lisboa, Portugal
+  <br>
+  <i class="fas fa-envelope" style="font-size: 16px; padding-right: 5px;"></i> mafaldasofiacf@tecnico.ulisboa.pt
 
 
-## Selected Talks
-
-- **Learning to Self-Train for Semi-Supervised Few-Shot Classification**
-  <br>
-  NeurIPS Official Meetups
-  <br>
-  Beijing, China, December 2019 [[Slides](https://people.mpi-inf.mpg.de/~yaliu/files/learning-to-self-train-slides.pdf)]
-
-- **Multi-Class Incremental Learning**
-  <br>
-  School of Computer Science and Engineering, Nanyang Technological University
-  <br>
-  Singapore, July 2019 [[Slides](https://people.mpi-inf.mpg.de/~yaliu/files/multi-class-incremental-learning.pdf)]
-
-- **Meta-Transfer Learning for Few-Shot Learning**
-  <br>
-  School of Computing, National University of Singapore
-  <br>
-  Singapore, April 2019 [[Slides](https://people.mpi-inf.mpg.de/~yaliu/files/meta-transfer-learning-slides.pdf)]
-
-## Services
-
-- Co-organizer: [ACM MM Asia 2020](https://mmasia2020.org/).
-- Conference Reviewers: [NeurIPS 2020](https://neurips.cc/Conferences/2020), and [CVPR 2020](http://cvpr2020.thecvf.com/).
-- Journal Reviewers: [T-PAMI](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34), and [IJCV](https://www.springer.com/journal/11263).
+<br>
+<br>

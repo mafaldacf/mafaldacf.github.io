@@ -19,10 +19,7 @@
     <link rel="canonical" href="{{ site.canonical }}"/>
     {% endif %}
 
-    <link rel="icon" media="(prefers-color-scheme:dark)" href="{{ site.favicon_dark }}" type="image/png" />
-    <link rel="icon" media="(prefers-color-scheme:light)" href="{{ site.favicon }}" type="image/png" />
-    <script src="./assets/js/favicon-switcher.js" type="application/javascript"></script>
-
+    <link rel="icon" media="(prefers-color-scheme:dark)" href="{{ site.avatar }}" type="image/png" />
     <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin=anonymous>
     <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin=anonymous>
 
@@ -31,9 +28,17 @@
 
   </head>
   <body class="is-preload">
-
     <!-- Header -->
-      <header id="header">
+    <header id="header">
+      <!-- Light/Dark Mode Icon -->
+      {%- if site.enable_darkmode %}
+      <li class="toggle-container">
+        <button id="theme-toggle" title="Change theme">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+        </button>
+      </li>
+    {%- endif %}
         <div class="inner">
           {% if site.avatar %}
           <a class="image avatar"><img src="{{site.avatar}}" alt="avatar" onContextMenu="return false" /></a>
@@ -41,23 +46,23 @@
           <h1 class="header-title"><strong><header-title>{{ site.title }}</header-title></strong><br></h1>
           <header-info>
           {% if site.position %}
-          {{ site.position }}<br>
+          {{ site.position }}
           {% endif %}
+          <br>
           {% if site.affiliation %}
           {{ site.affiliation }}
-          <br>
           {% endif %}
-          {% if site.email %}
-          {{ site.email }}
           <br>
+          {% if site.location %}
+          <i class="fas fa-map-marker-alt" style="font-size: 14px; padding-right: 5px;"></i> {{ site.location }}
           {% endif %}
+          <br>
           </header-info>
         </div>
       </header>
 
     <!-- Main -->
       <div id="main">
-
       <section id="main_content">
 
       {{ content }}
@@ -72,22 +77,35 @@
       <footer id="footer">
         <div class="inner">
           <ul class="icons">
-            {% if site.linkedin %}
-            <li><a href="{{ site.linkedin }}" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+            {% if site.email %}
+            <li><a href="mailto:{{ site.email | encode_email }}" class="icon fa-envelope" style="font-size: 14px;"></a></li>
             {% endif %}
-            {% if site.github_link %}
-            <li><a href="{{ site.github_link }}" class="icon brands fa-github"><span class="label">Github</span></a></li>
+            {% if site.linkedin_username %}
+            <li><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" class="icon brands fa-linkedin-in" style="font-size: 14px;"><span class="label">LinkedIn</span></a></li>
             {% endif %}
-            {% if site.google_scholar %}
-            <li><a href="{{ site.google_scholar }}" class="icon brands fa-google"><span class="label">Google Scholar</span></a></li>
+            {% if site.github_username %}
+            <li><a href="https://github.com/{{ site.github_username }}" class="icon brands fa-github" style="font-size: 14px;"><span class="label">Github</span></a></li>
+            {% endif %}
+            {% if site.google_scholar_id %}
+            <li><a href="https://scholar.google.com/citations?user={{ site.google_scholar_id }}" class="icon brands fa-google" style="font-size: 14px;"><span class="label">Google Scholar</span></a></li>
+            {% endif %}
+            {% if site.orcid_id %}
+            <li><a href="https://orcid.org/{{ site.orcid_id }}" class="icon brands fa-orcid" style="font-size: 14px;"><span class="label">ORCID</span></a></li>
             {% endif %}
             {% if site.cv_link %}
-            <li><a href="{{ site.cv_link }}" class="icon solid fa-file-pdf"><span class="label">CV</span></a></li>
+            <li><a href="{{ site.cv_link }}" class="icon solid fa-file-pdf" style="font-size: 14px;"><span class="label">CV</span></a></li>
             {% endif %}
           </ul>
-
         </div>
       </footer>
+    
+    <!-- Toogle theme mode -->
+    <script>
+      var icon = document.getElementById("theme-toggle");
+      icon.onclick = function() {
+        document.body.classList.toggle("light-theme");
+      }
+    </script>
 
     <!-- Scripts -->
       <script src="./assets/original/js/jquery.min.js"></script>

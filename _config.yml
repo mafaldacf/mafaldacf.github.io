@@ -1,16 +1,50 @@
-title: Your Name
-position: Ph.D. Student
-affiliation: Your Affiliation
-email: yourname (at) example.edu
+# -----------------------------------------------------------------------------
+# Personal Info
+# -----------------------------------------------------------------------------
+
+title: Mafalda Sofia Ferreira
+position: Researcher
+affiliation: Instituto Superior Técnico / INESC-ID
+location: Lisbon, Portugal
+email: mafaldasofiacf@tecnico.ulisboa.pt
 keywords: minimal academic
-google_scholar: https://scholar.google.com/
-github_link: https://github.com/yaoyao-liu/strata-academic
-linkedin: https://www.linkedin.com/
-cv_link: 
-avatar: ./assets/img/avatar.png
+google_scholar_id: #YadkawUAAAAJ
+linkedin_username: mafaldasofiacf
+github_username: mafaldacf
+orcid_id: #0009-0008-9659-4849
+cv_link: https://mafaldacf.github.io/docs/cv.pdf
+avatar: ./assets/img/photo.png # could just be square but we use it in the icon page as well
 google_analytics: UA-111540567-4
-favicon: ./assets/img/favicon.png
-favicon_dark: ./assets/img/favicon-dark.png
 description: The Strata Academic is a simple and elegant jekyll theme for academic personal homepage.
 canonical: https://strata-academic.yyliu.net/
 remote_theme: yaoyao-liu/strata-academic
+
+# -----------------------------------------------------------------------------
+# Optional Features
+# -----------------------------------------------------------------------------
+
+enable_google_analytics:    true  # enables google analytics
+enable_panelbear_analytics: false  # enables panelbear analytics
+enable_google_verification: true  # enables google site verification
+enable_bing_verification:   false  # enables bing site verification
+enable_masonry:             true   # enables automatic project cards arangement
+enable_math:                true   # enables math typesetting (uses MathJax)
+enable_tooltips:            false  # enables automatic tooltip links generated
+                                   # for each section titles on pages and posts
+enable_darkmode:            true   # enables switching between light/dark modes
+enable_navbar_social:       false  # enables displaying social links in the
+                                   # navbar on the about page
+enable_project_categories:  true   # enables categorization of projects into
+                                   # multiple categories
+enable_medium_zoom:         true   # enables image zoom feature (as on medium.com)
+
+
+# -----------------------------------------------------------------------------
+# Analytics and search engine verification
+# -----------------------------------------------------------------------------
+
+google_analytics:  # your Goole Analytics measurement ID (format: G-XXXXXXXXXX)
+panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
+
+google_site_verification:  # your google-site-verification ID (Google Search Console)
+bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
