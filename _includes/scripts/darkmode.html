@@ -1,0 +1,9 @@
+<!-- Toogle theme mode -->
+{%- if site.enable_darkmode -%}
+<script>
+    var icon = document.getElementById("theme-toggle");
+    icon.onclick = function() {
+      document.body.classList.toggle("dark-theme");
+    }
+</script>
+{%- endif -%}

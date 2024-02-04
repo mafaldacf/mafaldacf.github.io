@@ -5,115 +5,28 @@
   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-  <head>
-    <title>{{ site.title }} | {{site.affiliation}}</title>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ site.description }}">
-    {% if site.keywords %}
-    <meta name="keywords" content="{{ site.keywords }}">
-    {% endif %}
-    {% if site.canonical %}
-    <link rel="canonical" href="{{ site.canonical }}"/>
-    {% endif %}
-
-    <link rel="icon" media="(prefers-color-scheme:dark)" href="{{ site.avatar }}" type="image/png" />
-    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin=anonymous>
-    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin=anonymous>
-
-    <link rel="stylesheet" href="./assets/css/style.css">
-
-
-  </head>
+  {% include head.html %}
   <body class="is-preload">
     <!-- Header -->
-    <header id="header">
-      <!-- Light/Dark Mode Icon -->
-      {%- if site.enable_darkmode %}
-      <li class="toggle-container">
-        <button id="theme-toggle" title="Change theme">
-          <i class="fas fa-moon"></i>
-          <i class="fas fa-sun"></i>
-        </button>
-      </li>
-    {%- endif %}
-        <div class="inner">
-          {% if site.avatar %}
-          <a class="image avatar"><img src="{{site.avatar}}" alt="avatar" onContextMenu="return false" /></a>
-          {% endif %}
-          <h1 class="header-title"><strong><header-title>{{ site.title }}</header-title></strong><br></h1>
-          <header-info>
-          {% if site.position %}
-          {{ site.position }}
-          {% endif %}
-          <br>
-          {% if site.affiliation %}
-          {{ site.affiliation }}
-          {% endif %}
-          <br>
-          {% if site.location %}
-          <i class="fas fa-map-marker-alt" style="font-size: 14px; padding-right: 5px;"></i> {{ site.location }}
-          {% endif %}
-          <br>
-          </header-info>
-        </div>
-      </header>
+    {% include header.html %}
 
     <!-- Main -->
-      <div id="main">
-      <section id="main_content">
-
-      {{ content }}
-
-      <theme-info>Powered by Jekyll and <a href="https://github.com/yaoyao-liu/strata-academic" target="_blank" rel="noopener">Strata Academic</a> theme.</theme-info>
-
-      </section>
-
-      </div>
+    {% include main.html %}
 
     <!-- Footer -->
-      <footer id="footer">
-        <div class="inner">
-          <ul class="icons">
-            {% if site.email %}
-            <li><a href="mailto:{{ site.email | encode_email }}" class="icon fa-envelope" style="font-size: 14px;"></a></li>
-            {% endif %}
-            {% if site.linkedin_username %}
-            <li><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" class="icon brands fa-linkedin-in" style="font-size: 14px;"><span class="label">LinkedIn</span></a></li>
-            {% endif %}
-            {% if site.github_username %}
-            <li><a href="https://github.com/{{ site.github_username }}" class="icon brands fa-github" style="font-size: 14px;"><span class="label">Github</span></a></li>
-            {% endif %}
-            {% if site.google_scholar_id %}
-            <li><a href="https://scholar.google.com/citations?user={{ site.google_scholar_id }}" class="icon brands fa-google" style="font-size: 14px;"><span class="label">Google Scholar</span></a></li>
-            {% endif %}
-            {% if site.orcid_id %}
-            <li><a href="https://orcid.org/{{ site.orcid_id }}" class="icon brands fa-orcid" style="font-size: 14px;"><span class="label">ORCID</span></a></li>
-            {% endif %}
-            {% if site.cv_link %}
-            <li><a href="{{ site.cv_link }}" class="icon solid fa-file-pdf" style="font-size: 14px;"><span class="label">CV</span></a></li>
-            {% endif %}
-          </ul>
-        </div>
-      </footer>
+    {% include footer.html %}
     
-    <!-- Toogle theme mode -->
-    <script>
-      var icon = document.getElementById("theme-toggle");
-      icon.onclick = function() {
-        document.body.classList.toggle("dark-theme");
-      }
-    </script>
-
     <!-- Scripts -->
+      <!-- Original -->
       <script src="./assets/original/js/jquery.min.js"></script>
       <script src="./assets/original/js/jquery.poptrox.min.js"></script>
       <script src="./assets/original/js/browser.min.js"></script>
       <script src="./assets/original/js/breakpoints.min.js"></script>
       <script src="./assets/original/js/util.js"></script>
       <script src="./assets/original/js/main.js"></script>
+      <!-- Custom -->
+      {% include scripts/darkmode.html %}
+      {% include scripts/analytics.html %}
 
   </body>
 </html>
