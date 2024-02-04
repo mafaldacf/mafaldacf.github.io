@@ -42,7 +42,7 @@ Currently, I am conducting research at INESC-ID, exploring the topics of causal 
   <br>
   *Mar 2023 - Jun 2023*
   <br>
-  - Acquired insights into version control, continuous integration, and testing methodologies
+  - Acquired insights into version control, continuous integration, and testing methodologies.
   - Developed software using Python, JavaScript, SQL, HTML, Git, and Docker.
 
 ## AWARDS AND CERTIFICATES

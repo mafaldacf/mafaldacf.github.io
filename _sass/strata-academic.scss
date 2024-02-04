@@ -6,13 +6,32 @@
   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
 // global variables
 :root {
-  // dark mode is the default theme here
+  // light mode is the default theme here
+  --background: #e0e0e0;
+  --text: #303030;
+  --hover: #424242;
+  --header_background: #e0e0e0;
+  --header_text: #00000080;
+  --header_icons: #00000080;
+  --header_title: #303030;
+  --header_outline: #68686880;
+  .fa-sun {
+    display : none;
+  }
+  .fa-moon {
+    display : block;
+  }
+}
+
+
+.dark-theme {
   --background: #303030;
   --text: #c7c6c6;
   --hover: #eeeeee;
-  --header_background: #202020;
+  --header_background: #303030;
   --header_text: #ffffff80;
   --header_icons: #ffffff80;
   --header_title: #c7c6c6;
@@ -21,40 +40,6 @@
     display : none;
   }
   .fa-sun {
-    display : block;
-  }
-}
-
-.light-theme {
-  --background: #eeeeee;
-  --text: #303030;
-  --hover: #424242;
-  --header_background: #d4d4d4;
-  --header_text: #00000080;
-  --header_icons: #00000080;
-  --header_title: #303030;
-  --header_outline: #a8a8a880;
-  .fa-sun {
-    display : none;
-  }
-  .fa-moon {
-    display : block;
-  }
-}
-
-// currently not being used
-.mixed-theme {
-  --background: #eeeeee;
-  --text: #303030;
-  --hover: #424242;
-  --header_background: #303030;
-  --header_text: #ffffff80;
-  --header_title: #c7c6c6;
-  --header_outline: #a8a8a880;
-  .fa-sun {
-    display : none;
-  }
-  .fa-moon {
     display : block;
   }
 }
@@ -81,7 +66,7 @@ form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
-section, summary, time, mark, audio, video, light-toggle {
+section, summary, time, mark, audio, video, light-toggle, conf {
   margin: 0;
   padding: 0;
   border: 0;
@@ -95,6 +80,11 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+}
+
+conf {
+  color: #1b7697;
+  font-weight: 800;
 }
 
 .social-icons a{
@@ -2788,7 +2778,7 @@ input, select, textarea {
   #main {
     margin-left: 28%;
     max-width: 54em;
-    padding: 8em 2em 4em 2em;
+    padding: 5em 2em 4em 2em;
     width: calc(100% - 35%);
   }
 
